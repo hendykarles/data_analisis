@@ -20,7 +20,7 @@ with st.sidebar:
     st.write('Tanggal lahir:', date)
 
 # Main
-all_data = pd.read_csv("https://raw.githubusercontent.com/hendykarles/data_analisis/dashboard/all_data.csv")
+all_data = pd.read_csv("https://raw.githubusercontent.com/hendykarles/myapp/main/all_data.csv")
 
 sum_order_items_df = all_data.groupby("product_category_name_english")["product_id"].count().reset_index()
 sum_order_items_df = sum_order_items_df.rename(columns={"product_id": "products"})
